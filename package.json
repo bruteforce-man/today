@@ -1,0 +1,22 @@
+{
+  "name": "today",
+  "version": "1.0.0",
+  "description": "module used to find current day",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruteforce-man/today.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruteforce-man/today/issues"
+  },
+  "homepage": "https://github.com/bruteforce-man/today#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
