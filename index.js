@@ -1,32 +1,21 @@
 /* TODO: add timezone support*/
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let timezone;
 
-
-
-
-function Today = function(options){
-	if(options.timeZone){
-	timezone =  options.timezone;
-	}
-
-}
-
-Today.prototype.isToday = (day) => {
+//Check current day as user provided day
+const isToday = (day) => {
   if(!day){
   return false
   }
   if (typeof day === "string"){
-    return DAYS[Date.getDay()].toUpperCase() === day.toUpperCase();
+    return DAYS[new Date().getDay()].toUpperCase() === day.toUpperCase();
    } else {
-      return DAYS[Date.getDay()] === day;
+      return new Date().getDay() === day;
    }	
 }
 
-
-Today.prototype.currentDay = () =>{
-  return DAYS[Date.getDay()];
+// return current day
+const currentDay = () =>{
+  return DAYS[new Date().getDay()];
 }
 
-
-module.exports = Today;
+module.exports = {currentDay, isToday};
